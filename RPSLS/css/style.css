@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'vt323regular';
+    src: url('../fonts/vt323-regular-webfont.woff2') format('woff2'),
+    url('../fonts/vt323-regular-webfont.woff') format('woff'),
+    url('../fonts/vt323-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'impact_label_reversedregular';
+    src: url('../fonts/impact_label_reversed-webfont.woff2') format('woff2'),
+    url('../fonts/impact_label_reversed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'impact_labelregular';
+    src: url('../fonts/impact_label-webfont.woff2') format('woff2'),
+    url('../fonts/impact_label-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+    width: 75%;
+    background-image: url("../images/Metal12.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+
+.display {
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(darkslategray, gray);
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    border-top:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+.row {
+    clear:both;
+    margin:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(336deg, rgba(150,150,150,1) 0%, rgba(50,50,50,1) 100%);
+}
+
+.module{
+    border-top:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 3px darkslategray;
+    background: linear-gradient(120deg, rgba(150,150,150,1) 0%, rgba(230,230,230,1) 100%);
+}
+
+.check{
+    font-family: 'impact_label_reversedregular', sans-serif;
+    letter-spacing: -1.75px;
+    color: white;
+    background-color: black;
+    box-shadow: -1px -1px 2px darkslategray;
+}
+
+.module::before{
+    font-family: 'impact_label_reversedregular', sans-serif;
+    letter-spacing: -1.75px;
+    line-height: 20px;
+    width: 100px;
+    background-color: black;
+    padding: 3px;
+    color: white;
+    transform: rotate(3deg);
+    box-shadow: -1px -1px 2px darkslategray;
+    content: "RPSLS mk.III";
+}
+
+.module2::before{
+    font-family: 'impact_label_reversedregular', sans-serif;
+    letter-spacing: -2px;
+    line-height: 20px;
+    width: 100px;
+    background-color: black;
+    padding: 3px;
+    box-shadow: -1px -1px 2px darkslategray;
+    color: white;
+    content: "mk.III rev.2";
+}
+
+.screen {
+   /* background: linear-gradient(135deg, rgba(34,122,5,1) 0%, rgba(35,87,0,1) 47%, rgba(35,87,0,1) 100%); */
+    background: linear-gradient(to bottom, rgba(112,212,112,0.62) 0%, rgba(112,212,112,1) 0%, rgba(200,250,200,1) 10%, rgba(112,212,112,1) 20%, rgba(200,250,200,1) 30%, rgba(112,212,112,1) 40%, rgba(200,250,200,1) 50%, rgba(112,212,112,1) 60%, rgba(200,250,200,1) 70%, rgba(112,212,112,1) 80%, rgba(200,250,200,1) 90%, rgba(112,212,112,1) 100%);
+    filter: brightness(50%);
+    height: 90px;
+    font-family: 'vt323regular', serif;
+    color:green;
+    margin: 4px;
+    border-radius: 10px;
+    font-size: 2em;
+    box-shadow: -2px -2px 3px darkslategray;
+    border-top:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    animation: scanline 2s infinite;
+}
+
+@keyframes scanline {
+    0%   {
+        background: linear-gradient(to bottom, rgba(112,212,112,1) 0%, rgba(112,212,112,1) 0%, rgba(200,250,200,1) 10%, rgba(112,212,112,1) 20%, rgba(200,250,200,1) 30%, rgba(112,212,112,1) 40%, rgba(200,250,200,1) 50%, rgba(112,212,112,1) 60%, rgba(200,250,200,1) 70%, rgba(112,212,112,1) 80%, rgba(200,250,200,1) 90%, rgba(112,212,112,1) 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom, rgba(200,250,200,1) 0%, rgba(200,250,200,1) 0%, rgba(112,212,112,1) 10%, rgba(200,250,200,1) 20%, rgba(112,212,112,1) 30%, rgba(200,250,200,1) 40%, rgba(112,212,112,1) 50%, rgba(200,250,200,1) 60%, rgba(112,212,112,1) 70%, rgba(200,250,200,1) 80%, rgba(112,212,112,1) 90%, rgba(200,250,200,1)  100%);
+    }
+    100%    {
+        background: linear-gradient(to bottom, rgba(112,212,112,0.62) 0%, rgba(112,212,112,1) 0%, rgba(200,250,200,1) 10%, rgba(112,212,112,1) 20%, rgba(200,250,200,1) 30%, rgba(112,212,112,1) 40%, rgba(200,250,200,1) 50%, rgba(112,212,112,1) 60%, rgba(200,250,200,1) 70%, rgba(112,212,112,1) 80%, rgba(200,250,200,1) 90%, rgba(112,212,112,1) 100%);
+    }
+}
+
+
+.smallScr {
+    width: 100px;
+    font-size: 1.25em;
+}
+
+.button {
+    font-family: 'impact_label_reversedregular', sans-serif;
+    letter-spacing: -1.75px;
+    color: white;
+    font-size: 1.5em;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 47%, rgba(231,56,39,1) 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+    margin: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-shadow: -1px -1px 0px rgba(0,0,0,.5);
+    box-shadow: 0px 6px 0px rgba(231,56,39,1), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.hover{
+    background: radial-gradient(ellipse at center, rgba(250,146,127,1) 0%, rgba(255,87,71,1) 47%, rgba(255,87,71,1) 100%);
+    box-shadow: 0px 6px 0px rgba(248,80,50,1), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.clicked {
+    box-shadow: 0px 1px 0px rgba(248,80,50,1), 0px 1px 5px rgba(0,0,0,.4), inset 0px 4px 0px rgba(255,255,255,.3), inset 0px 0px 5px rgba(255,255,255,.5);
+    transform: translate(0, 4px);
+    border-top:2px solid white;
+    border-left:2px solid white;
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+}
+
+#bigscreen {
+    margin-top: 5px;
+    width: 70%;
+    margin-left: 2px;
+    float: left;
+}
+
+#smallscreen {
+    margin-top: 5px;
+    width: 20%;
+    margin-right: 2px;
+    float: right;
+}
+
+#head {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#head p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: left;
+    animation: head 10s infinite;
+}
+
+@keyframes head {
+    0%   {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100%    {
+        transform: translateX(100%);
+    }
+}
