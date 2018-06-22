@@ -1,2 +1,4 @@
 # RPLS
 Rock-Paper-Scissors-Lizard-Spock game
+Designed to look a bit like and old, huge rack device.
+The second folder contains the game with Polish translation
