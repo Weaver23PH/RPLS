@@ -181,7 +181,37 @@ document.addEventListener("DOMContentLoaded", function () {
             screenMessages(winner, player1, player2);
         }
 
-        function screenMessages(winner, player1, player2) {
+        function screenMessages(winner, player1, player2){
+            if (version === language.PL){
+                switch(player1){
+                    case "lizard":
+                        player1 = "jaszczur";
+                        break;
+                    case "rock":
+                        player1 = "kamień";
+                        break;
+                    case "paper":
+                        player1 = "papier";
+                        break;
+                    case "scissors":
+                        player1 = "nożyce";
+                        break;
+                }
+                switch(player2){
+                    case "lizard":
+                        player2 = "jaszczur";
+                        break;
+                    case "rock":
+                        player2 = "kamień";
+                        break;
+                    case "paper":
+                        player2 = "papier";
+                        break;
+                    case "scissors":
+                        player2 = "nożyce";
+                        break;
+                }
+            }
             smallScreen.innerHTML = ("Score : " + "\n" + pl1Score + " : " + cpuScore);
             if (winner === "player1") {
                 bigScreen.innerText = version.youChoseMsg + player1 + version.cpuChoseMsg + player2 + version.youWinMsg;
