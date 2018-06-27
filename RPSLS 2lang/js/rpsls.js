@@ -42,11 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 youChoseMsg: "You chose ",
                 cpuChoseMsg: ", the computer chose ",
                 youWinMsg: ". You win!",
-                cpuWinsMSg: ". The computer wins!",
-                drawMSg: ". It's a draw!",
+                cpuWinsMsg: ". The computer wins!",
+                drawMsg: ". It's a draw!",
                 youWinMatchMsg: "You win the match with ",
                 cpuWinsMatchMsg: "The computer wins the match with ",
-                points: " point(s)!"
+                points: " point(s)!",
+                score: "Score: "
             },
             PL: {
                 headScroll: "Kamień-Papier-Nożyce-Jaszczur-Spock",
@@ -65,11 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 youChoseMsg: "Wybrałeś ",
                 cpuChoseMsg: ", komputer wybrał ",
                 youWinMsg: ". Wygrywasz!",
-                cpuWinsMSg: ". Komputer wygrywa!",
-                drawMSg: ". Remis!",
+                cpuWinsMsg: ". Komputer wygrywa!",
+                drawMsg: ". Remis!",
                 youWinMatchMsg: "Wygrywasz mecz zdobywając ",
                 cpuWinsMatchMsg: "Komputer wygrywa mecz zdobywając ",
-                points: " punkt(y)!"
+                points: " punkt(y)!",
+                score: "Wynik: "
             }
         };
 
@@ -212,17 +214,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         break;
                 }
             }
-            smallScreen.innerHTML = ("Score : " + "\n" + pl1Score + " : " + cpuScore);
+            smallScreen.innerHTML = (version.score + "\n" + pl1Score + " : " + cpuScore);
             if (winner === "player1") {
                 bigScreen.innerText = version.youChoseMsg + player1 + version.cpuChoseMsg + player2 + version.youWinMsg;
                 pl1Score++;
-                smallScreen.innerHTML = ("Score : " + "\n" + pl1Score + " : " + cpuScore);
+                smallScreen.innerHTML = (version.score + "\n" + pl1Score + " : " + cpuScore);
             } else if (winner === "computer") {
-                bigScreen.innerText = version.youChoseMsg + player1 + version.cpuChoseMsg + player2 + version.cpuWinsMSg;
+                bigScreen.innerText = version.youChoseMsg + player1 + version.cpuChoseMsg + player2 + version.cpuWinsMsg;
                 cpuScore++;
-                smallScreen.innerHTML = ("Score : " + "\n" + pl1Score + " : " + cpuScore);
+                smallScreen.innerHTML = (version.score + "\n" + pl1Score + " : " + cpuScore);
             } else if (winner === "draw") {
-                bigScreen.innerText = version.youChoseMsg + player1 + version.cpuChoseMsg + player2 + version.drawMSg;
+                bigScreen.innerText = version.youChoseMsg + player1 + version.cpuChoseMsg + player2 + version.drawMsg;
             } else if (winner === "exit") {
                 if (pl1Score > cpuScore) {
                     bigScreen.innerText = version.youWinMatchMsg + pl1Score + version.points;
@@ -233,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     pl1Score = 0;
                     cpuScore = 0;
                 } else if (pl1Score === cpuScore) {
-                    bigScreen.innerText = version.drawMSg;
+                    bigScreen.innerText = version.drawMsg;
                     pl1Score = 0;
                     cpuScore = 0;
                 }
